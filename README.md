@@ -17,7 +17,23 @@ The system draws a fixed virtual object (rectangle).
 The hand’s distance from this box determines the interaction state.
 Distance-based interaction states
 The prototype continuously measures distance from hand → box boundary and classifies into:
-State	Meaning
-SAFE	Hand far from boundary
-WARNING	Hand approaching the virtual object
-DANGER	Hand extremely close / touching the boundary
+| State       | Meaning                                      |
+| ----------- | -------------------------------------------- |
+| **SAFE**    | Hand far from boundary                       |
+| **WARNING** | Hand approaching the virtual object          |
+| **DANGER**  | Hand extremely close / touching the boundary |
+Visual overlays
+
+The live camera feed shows:
+
+Current state (SAFE / WARNING / DANGER)
+
+Big red “DANGER DANGER” text when triggered
+
+Hand contour + convex hull in green
+
+Fingertip (red) + selected tracking point (yellow)
+
+FPS counter
+
+Mask preview (bottom-right)
