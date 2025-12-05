@@ -22,18 +22,12 @@ The prototype continuously measures distance from hand → box boundary and clas
 | **SAFE**    | Hand far from boundary                       |
 | **WARNING** | Hand approaching the virtual object          |
 | **DANGER**  | Hand extremely close / touching the boundary |
+
 Visual overlays
-
 The live camera feed shows:
-
 Current state (SAFE / WARNING / DANGER)
-
 Big red “DANGER DANGER” text when triggered
-
 Hand contour + convex hull in green
-
 Fingertip (red) + selected tracking point (yellow)
-
 FPS counter
-
 Mask preview (bottom-right)
