@@ -4,12 +4,19 @@ DANGER DANGER
 This POC is implemented without MediaPipe, OpenPose, or cloud AI, using only OpenCV + NumPy and classical CV techniques.
 Features
 Real-time hand/fingertip tracking (classical CV only)
+
 Uses:
+
 HSV skin segmentation
+
 Morphology cleanup
+
 Largest contour selection
+
 Convex hull visualization
+
 Centroid estimation
+
 Fingertip approximation using max-distance heuristic
 
 Virtual boundary (on-screen box)
@@ -25,9 +32,15 @@ The prototype continuously measures distance from hand → box boundary and clas
 
 Visual overlays
 The live camera feed shows:
+
 Current state (SAFE / WARNING / DANGER)
+
 Big red “DANGER DANGER” text when triggered
+
 Hand contour + convex hull in green
+
 Fingertip (red) + selected tracking point (yellow)
+
 FPS counter
+
 Mask preview (bottom-right)
