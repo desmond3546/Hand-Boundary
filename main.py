@@ -8,7 +8,7 @@ main.py  (improved hand_boundary_poc)
   * history-based smoothing (longer deque to avoid flicker)
   * danger padding & warning visualization
   * flashing DANGER overlay for visibility
-  * optional on-screen HSV calibration: press 'c' while your hand is inside the small calibration box
+  * optional on-screen HSV calibration: press 'c' while the hand is inside the small calibration box
 Usage:
     python main.py
 Keys:
@@ -28,7 +28,7 @@ FRAME_HEIGHT = 480
 BLUR_K = 7
 MIN_CONTOUR_AREA = 1500
 
-# Default (broad) skin HSV range (you can calibrate at runtime with 'c')
+# Default (broad) skin HSV range (Can calibrate at runtime with 'c')
 SKIN_HSV_LOWER = np.array([0, 30, 60])
 SKIN_HSV_UPPER = np.array([25, 200, 255])
 
@@ -178,7 +178,7 @@ def draw_dashed_rect(img, p1, p2, color, thickness=1, dash_len=8):
 def calibrate_hsv_from_box(frame):
     """
     Read small top-left box and compute HSV mean and set skin bounds around it.
-    Press 'c' while your hand is in the calibration box.
+    Press 'c' while the hand is in the calibration box.
     """
     small = cv2.resize(frame, (FRAME_WIDTH, FRAME_HEIGHT))
     # calibration box in top-left: 40x40
@@ -389,3 +389,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
